@@ -1,0 +1,28 @@
+.container {
+  margin: 0 auto;
+  width: 1024px;
+}
+
+header {
+  background-color: blue;
+  height: 118px;
+  width: 100%;
+}
+
+nav {
+  background-color: red;
+  height: 40px;
+  width: 100%;
+}
+
+main {
+  background-color: orange;
+  height: 400px;
+  width: 100%;
+}
+
+footer {
+  background-color: green;
+  height: 100px;
+  width: 100%;
+}
