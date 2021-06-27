@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #2f3035;
 }
@@ -8,9 +14,9 @@ body {
 }
 
 header {
-  background-color: blue;
   height: 118px;
   width: 100%;
+  text-align: center;
 }
 
 nav {
@@ -20,13 +26,25 @@ nav {
 }
 
 main {
-  background-color: orange;
   height: 400px;
-  width: 100%;
+  text-align: center;
+  padding: 80px 240px;
 }
 
 footer {
   background-color: green;
   height: 100px;
   width: 100%;
+}
+
+h1 {
+  font-size: 84px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  font-size: 18px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
