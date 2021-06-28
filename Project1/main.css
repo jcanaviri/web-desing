@@ -97,3 +97,6 @@ nav a:hover {
   transform: translateY(4px);
 }
 
+.maps {
+  padding-bottom: 100px;
+}
