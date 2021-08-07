@@ -1,4 +1,4 @@
-const finalTime = '17 Sep 2021';
+const finalTime = '02 Dec 2021';
 const daysField = document.querySelector('#days');
 const hoursField = document.querySelector('#hours');
 const minutesField = document.querySelector('#minutes');
