@@ -4,7 +4,7 @@ const loader = document.querySelector('.loader');
 window.addEventListener('load', () => {
   setTimeout(() => {
     loader.style.display = 'none';
-  }, 1000);
+  }, 500);
 });
 
 const loading = document.querySelector('.loading');
