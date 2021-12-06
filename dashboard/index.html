@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accusoft Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet' />
+</head>
+
+<body>
+    <input type="checkbox" id="nav-toggle">
+    <!-- Sidebar begins -->
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <i class='bx bx-meteor'></i>
+            <h2>Accusoft</h2>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="">
+                        <i class='bx bxs-dashboard'></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="active">
+                        <i class='bx bx-user text-bg'></i>
+                        <span class="text-bg">Customers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class='bx bx-clipboard'></i>
+                        <span>Proyects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class='bx bx-shopping-bag'></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class='bx bx-receipt'></i>
+                        <span>Inventary</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class='bx bx-task'></i>
+                        <span>Task</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Sidebar ends -->
+
+    <!-- Main content begins -->
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="nav-toggle">
+                    <i class='bx bx-menu-alt-left'></i>
+                </label>
+                Dashboard
+            </h2>
+
+            <div class="search-wrapper">
+                <input type="search" placeholder="search...">
+                <i class='bx bx-search-alt-2'></i>
+            </div>
+
+            <div class="user-wrapper">
+                <img src="./img/profile-pic.png" width="40px" alt="">
+                <div>
+                    <h4>John Doe</h4>
+                    <small>Super Admin</small>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="cards">
+                <div class="card-single">
+                    <div>
+                        <h1>54</h1>
+                        <span>Customers</span>
+                    </div>
+                    <div>
+                        <i class='bx bx-user text-bg'></i>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div>
+                        <h1>25</h1>
+                        <span>Proyects</span>
+                    </div>
+                    <div>
+                        <i class='bx bx-clipboard text-bg'></i>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div>
+                        <h1>56</h1>
+                        <span>Orders</span>
+                    </div>
+                    <div>
+                        <i class='bx bx-shopping-bag text-bg'></i>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div>
+                        <h1>$6k</h1>
+                        <span>Income</span>
+                    </div>
+                    <div>
+                        <i class='bx bx-dollar'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-grid">
+                <div class="projects">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Recent Proyects</h3>
+                            <button>See all
+                                <i class='bx bx-right-arrow-circle'></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td>Project Title</td>
+                                            <td>Department</td>
+                                            <td>Status</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>UI/UX Desing</td>
+                                            <td>UI Team</td>
+                                            <td>
+                                                <span class="status purple"></span>
+                                                Review
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>UI/UX Desing</td>
+                                            <td>UI Team</td>
+                                            <td>
+                                                <span class="status pink"></span>
+                                                In progress
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>UI/UX Desing</td>
+                                            <td>UI Team</td>
+                                            <td>
+                                                <span class="status orange"></span>
+                                                Pendient
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>UI/UX Desing</td>
+                                            <td>UI Team</td>
+                                            <td>
+                                                <span class="status purple"></span>
+                                                Pendient
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>UI/UX Desing</td>
+                                            <td>UI Team</td>
+                                            <td>
+                                                <span class="status orange"></span>
+                                                Pendient
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>UI/UX Desing</td>
+                                            <td>UI Team</td>
+                                            <td>
+                                                <span class="status pink"></span>
+                                                Pendient
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="customers">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>New Customers</h3>
+                            <button>See all <i class='bx bx-right-arrow-circle'></i></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="./img/profile-pic.png" width="40px" alt="">
+                                    <div>
+                                        <h4>Lewis S. Cunningham</h4>
+                                        <small>CEO</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <i class='bx bxs-user-circle text-bg'></i>
+                                    <i class='bx bxs-comment-detail text-bg'></i>
+                                    <i class='bx bxs-phone text-bg'></i>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="./img/profile-pic.png" width="40px" alt="">
+                                    <div>
+                                        <h4>Lewis S. Cunningham</h4>
+                                        <small>CEO</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <i class='bx bxs-user-circle text-bg'></i>
+                                    <i class='bx bxs-comment-detail text-bg'></i>
+                                    <i class='bx bxs-phone text-bg'></i>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="./img/profile-pic.png" width="40px" alt="">
+                                    <div>
+                                        <h4>Lewis S. Cunningham</h4>
+                                        <small>CEO</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <i class='bx bxs-user-circle text-bg'></i>
+                                    <i class='bx bxs-comment-detail text-bg'></i>
+                                    <i class='bx bxs-phone text-bg'></i>
+                                </div>
+                            </div>
+                            <div class="customer">
+                                <div class="info">
+                                    <img src="./img/profile-pic.png" width="40px" alt="">
+                                    <div>
+                                        <h4>Lewis S. Cunningham</h4>
+                                        <small>CEO</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <i class='bx bxs-user-circle text-bg'></i>
+                                    <i class='bx bxs-comment-detail text-bg'></i>
+                                    <i class='bx bxs-phone text-bg'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <!-- Main content ends -->
+</body>
+
+</html>
