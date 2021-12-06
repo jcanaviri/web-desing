@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 
 * {
   margin: 0;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   background: #fafafa;
   padding-bottom: 100px;
 }
@@ -17,8 +17,8 @@ body {
 }
 .blog-post {
   background-color: #fff;
-  box-shadow: 3px 3px 6px rgba(50, 50, 50, 0.1),
-    0px 2px 4px rgba(60, 60, 60, 0.1);
+  box-shadow: 3px 3px 4px rgba(50, 50, 50, 0.1), 
+      -3px -3px 4px rgba(60, 60, 60, 0.1);
   border-radius: 5px;
   padding: 40px;
   margin: 20px 0;
@@ -36,8 +36,8 @@ body {
 }
 .user-info img {
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
 }
 .user-info span {
   font-size: 13px;
@@ -52,51 +52,32 @@ body {
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
-  transition: opacity 0.3s ease-in;
+  transition: opacity 300ms ease-in;
 }
 .loading.show {
   opacity: 1;
 }
-.loading .sp {
-  width: 32px;
-  height: 32px;
-}
-.loading .sp-circle {
-  border: 4px rgba(0, 0, 0, 0.25) solid;
-  border-top: 4px rgba(0, 0, 0, 1) solid;
+.loading .circle {
   border-radius: 50%;
-  animation: spCirRot 0.6s infinite linear;
+  background: #555;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  animation: jumping 0.5s ease-in-out infinite;
 }
 
-/* Main Loader */
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  transition: display 0.3s ease;
+.loading .circle:nth-child(2) {
+  animation-delay: 0.1s;
 }
-.loader {
-  opacity: 1;
-}
-.loader .sp {
-  width: 32px;
-  height: 32px;
-  margin: 30px;
-}
-.loader .sp-circle {
-  border: 4px rgba(0, 0, 0, 0.25) solid;
-  border-top: 4px rgba(0, 0, 0, 1) solid;
-  border-radius: 50%;
-  animation: spCirRot 0.6s infinite linear;
+.loading .circle:nth-child(3) {
+  animation-delay: 0.2s;
 }
 
-
-@keyframes spCirRot {
-  from {
-    transform: rotate(0deg);
+@keyframes jumping {
+  0% {
+    transform: translateY(0px);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-10px);
   }
 }

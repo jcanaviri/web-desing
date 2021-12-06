@@ -1,47 +1,49 @@
-'use strict';
+"use strict";
 
-const loader = document.querySelector('.loader');
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    loader.style.display = 'none';
-  }, 700);
-});
+const loaderPage = document.querySelector('.loader-page');
+document.addEventListener('load', () => {
+  loaderPage.classList.remove('show')
+})
 
-const loading = document.querySelector('.loading');
-const container = document.getElementById('container');
+const loading = document.querySelector(".loading");
+const container = document.getElementById("container");
 
 getPost();
 getPost();
 getPost();
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
   // If we are at the bottom of the page
   if (clientHeight + scrollTop >= scrollHeight - 5) {
     showLoading();
-    // TODO: Make it the loading animation desapire on scroll top
     setTimeout(() => {
       getPost();
-    }, 1500);
+    }, 600)
+  } else {
+    hideLoading();
   }
 });
 
 function showLoading() {
-  loading.classList.add('show');
+  loading.classList.add("show");
+}
+function hideLoading() {
+  loading.classList.remove("show");
 }
 
 async function getPost() {
+  // Get arandom post text
   const postResponse = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${getRandomNumber()}`
-  )
-    .then((response) => response.json())
-    .then((postData) => postData);
+  );
+  const postData = await postResponse.json();
 
-  const userResponse = await fetch('https://randomuser.me/api')
-    .then((response) => response.json())
-    .then((userData) => userData);
+  // Get a random user
+  const userResponse = await fetch("https://randomuser.me/api");
+  const userData = await userResponse.json();
 
-  const data = { post: postResponse, user: userResponse.results[0] };
+  const data = { post: postData, user: userData.results[0] };
   // console.log(data);
   addDataToDOM(data);
 }
@@ -51,8 +53,8 @@ function getRandomNumber() {
 }
 
 function addDataToDOM(data) {
-  const postElement = document.createElement('div');
-  postElement.classList.add('blog-post');
+  const postElement = document.createElement("div");
+  postElement.classList.add("blog-post");
   postElement.innerHTML = `
     <h2 class="title">${data.post.title}</h2>
     <p class="text">${data.post.body}</p>
@@ -62,5 +64,5 @@ function addDataToDOM(data) {
     </div>
   `;
   container.appendChild(postElement);
-  loading.classList.remove('show');
+  hideLoading();
 }
